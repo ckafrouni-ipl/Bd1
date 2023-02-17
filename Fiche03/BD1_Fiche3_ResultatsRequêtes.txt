@@ -1,0 +1,672 @@
++-------------------------------------+
+|BD1 Solution des requêtes de niveau 2|
++-------------------------------------+
+
+--2.1 (57 rows)
++-------------+----------------------------------------+----------+-----------+-------+
+|isbn         |titre                                   |scenariste|dessinateur|editeur|
++-------------+----------------------------------------+----------+-----------+-------+
+|2-87097-055-9|Joyeux Noël, May                        |Cosey     |Cosey      |4      |
+|2-205-03043-4|La fiancée de Lucky Luke                |Guy Vidal |Morris     |2      |
+|2-88257-000-4|Nitroglycérine                          |Guy Vidal |Morris     |2      |
+|2-205-00585-5|Ma Dalton                               |Goscinny  |Morris     |2      |
+|2-205-00920-6|La guérison des Dalton                  |Goscinny  |Morris     |2      |
+|2-203-00105-4|L'Oreille Cassée                        |Hergé     |Hergé      |7      |
+|2-203-00103-8|Les Cigares du Pharaon                  |Hergé     |Hergé      |7      |
+|2-203-00107-0|Le Sceptre d'Ottokar                    |Hergé     |Hergé      |7      |
+|2-908-46271-0|FAITES GAFFE A LAGAFFE                  |Franquin  |Franquin   |4      |
+|2-8001-0955-6|LA SAGA DES GAFFES                      |Franquin  |Franquin   |4      |
+|2-8001-0091-5|LE CAS LAGAFFE                          |null      |Franquin   |4      |
+|2-8001-0019-2|Spirou et les hommes-bulles             |Franquin  |Franquin   |4      |
+|2-8001-0018-4|L'ombre du Z                            |Jidehem   |Franquin   |4      |
+|2-8001-0017-6|Z comme Zorglub                         |null      |Franquin   |4      |
+|2-8001-0015-X|Le voyageur du mésozoïque               |null      |Franquin   |4      |
+|2-895-00012-3|Idées Noires                            |null      |Franquin   |8      |
+|2-8035-0029-9|Modeste et Pompon                       |null      |Franquin   |5      |
+|2-86497-004-X|L'odyssée d'Astérix                     |Uderzo    |Uderzo     |1      |
+|2-205-00096-9|Astérix le gaulois                      |Goscinny  |Uderzo     |2      |
+|2-205-00600-2|Les lauriers de César                   |Goscinny  |Uderzo     |2      |
+|2-205-00230-9|Astérix légionnaire                     |Goscinny  |Uderzo     |2      |
+|2-87097-017-X|Les 3 Formules du Professeur Sato       |Jacobs    |Jacobs     |3      |
+|2-152-12345-X|Les aventures complètes d'Oumpah-Pah    |Goscinny  |Uderzo     |6      |
+|2-203-00109-0|Coke en Stock                           |Hergé     |Hergé      |7      |
+|2-205-01150-2|Astérix chez les Belges                 |Goscinny  |Uderzo     |2      |
+|2-87097-009-9|Le mystère de la grande pyramide        |Jacobs    |Jacobs     |3      |
+|2-87097-008-0|Le mystère de la grande pyramide        |Jacobs    |Jacobs     |3      |
+|2-87097-010-2|La marque jaune                         |Jacobs    |Jacobs     |3      |
+|2-87097-043-9|L'Affaire Françis Blake                 |Benoît    |Van Hamme  |3      |
+|2-87097-052-8|La Machination Voronov                  |Sente     |Juillard   |3      |
+|2-87097-178-8|La Machination Voronov                  |Sente     |Juillard   |3      |
+|2-8001-2900-x|Zeke raconte des histoires              |Cosey     |Cosey      |4      |
+|2-8021-3900-x|Spirou et Fantasio à Tokyo              |null      |Benoît     |2      |
+|2-8031-3900-6|Une dernière aventure d'Astérix         |null      |Dupuis     |2      |
+|2-203-00123-2|Tintin et les Picaros                   |Hergé     |Hergé      |7      |
+|2-203-00117-8|L'Affaire Tournesol                     |Hergé     |Hergé      |7      |
+|2-203-12345-6|Vol 714 pour Sydney                     |Hergé     |Hergé      |7      |
+|2-87097-002-1|Le Secret de l'Espadon tome 1           |Jacobs    |Jacobs     |3      |
+|2-87097-004-8|Le Secret de L'Espadon tome 2           |Jacobs    |Jacobs     |3      |
+|2-87097-005-6|Le Secret de L'Espadon tome 3           |Jacobs    |Jacobs     |3      |
+|2-205-00921-4|Obélix et compagnie                     |Goscinny  |Uderzo     |6      |
+|2-86497-020-1|Astérix chez Rahazade                   |Uderzo    |Uderzo     |1      |
+|2-205-01144-8|Le Fil qui chante                       |Goscinny  |Morris     |2      |
+|2-205-00517-0|Canyon Apache                           |Goscinny  |Morris     |4      |
+|2-258-03431-0|Adieu Monde Cruel!                      |null      |null       |9      |
+|2-8001-2850-X|Captives à bord                         |Pellerin  |null       |4      |
+|2-7234-9164-1|La quête d'Ewilan : d'un monde à l'autre|Lylian    |Baldetti   |11     |
+|2-8036-1079-5|Histoire sans héros                     |Van Hamme |null       |6      |
+|2-8649-7199-3|La galère d'Obélix                      |Uderzo    |null       |1      |
+|2-8649-7199-4|La galère d'Obélix                      |Uderzo    |null       |1      |
+|2-8649-7266-2|Astérix chez les Pictes                 |Ferri     |Conrad     |1      |
+|1-0347-4357-5|Bad cave                                |null      |Midam      |4      |
+|1-0347-4914-0|On ne parle pas la bouche pleine !      |Janry     |Janry      |4      |
+|1-0347-3125-1|La vérité sur tout                      |Janry     |Janry      |4      |
+|2-8649-7596-3|Pas de quartier pour le latin !         |null      |null       |1      |
+|1-0327-1144-6|De la seconde A au OFA                  |Horikoshi |Horikoshi  |12     |
+|2-258-03438-8|En avant, tête de thon !                |null      |null       |9      |
++-------------+----------------------------------------+----------+-----------+-------+
+
+--2.2 (57 rows)
++-------------+----------------------------------------+----------+-----------+-----------------+
+|isbn         |titre                                   |scenariste|dessinateur|nom              |
++-------------+----------------------------------------+----------+-----------+-----------------+
+|2-87097-055-9|Joyeux Noël, May                        |Cosey     |Cosey      |Dupuis           |
+|2-205-03043-4|La fiancée de Lucky Luke                |Guy Vidal |Morris     |Dargaud          |
+|2-88257-000-4|Nitroglycérine                          |Guy Vidal |Morris     |Dargaud          |
+|2-205-00585-5|Ma Dalton                               |Goscinny  |Morris     |Dargaud          |
+|2-205-00920-6|La guérison des Dalton                  |Goscinny  |Morris     |Dargaud          |
+|2-203-00105-4|L'Oreille Cassée                        |Hergé     |Hergé      |Casterman        |
+|2-203-00103-8|Les Cigares du Pharaon                  |Hergé     |Hergé      |Casterman        |
+|2-203-00107-0|Le Sceptre d'Ottokar                    |Hergé     |Hergé      |Casterman        |
+|2-908-46271-0|FAITES GAFFE A LAGAFFE                  |Franquin  |Franquin   |Dupuis           |
+|2-8001-0955-6|LA SAGA DES GAFFES                      |Franquin  |Franquin   |Dupuis           |
+|2-8001-0091-5|LE CAS LAGAFFE                          |NULL      |Franquin   |Dupuis           |
+|2-8001-0019-2|Spirou et les hommes-bulles             |Franquin  |Franquin   |Dupuis           |
+|2-8001-0018-4|L'ombre du Z                            |Jidehem   |Franquin   |Dupuis           |
+|2-8001-0017-6|Z comme Zorglub                         |NULL      |Franquin   |Dupuis           |
+|2-8001-0015-X|Le voyageur du mésozoïque               |NULL      |Franquin   |Dupuis           |
+|2-895-00012-3|Idées Noires                            |NULL      |Franquin   |Fluide Glacial   |
+|2-8035-0029-9|Modeste et Pompon                       |NULL      |Franquin   |Magic Strip      |
+|2-86497-004-X|L'odyssée d'Astérix                     |Uderzo    |Uderzo     |Albert René      |
+|2-205-00096-9|Astérix le gaulois                      |Goscinny  |Uderzo     |Dargaud          |
+|2-205-00600-2|Les lauriers de César                   |Goscinny  |Uderzo     |Dargaud          |
+|2-205-00230-9|Astérix légionnaire                     |Goscinny  |Uderzo     |Dargaud          |
+|2-87097-017-X|Les 3 Formules du Professeur Sato       |Jacobs    |Jacobs     |Blake et Mortimer|
+|2-152-12345-X|Les aventures complètes d'Oumpah-Pah    |Goscinny  |Uderzo     |Le Lombard       |
+|2-203-00109-0|Coke en Stock                           |Hergé     |Hergé      |Casterman        |
+|2-205-01150-2|Astérix chez les Belges                 |Goscinny  |Uderzo     |Dargaud          |
+|2-87097-009-9|Le mystère de la grande pyramide        |Jacobs    |Jacobs     |Blake et Mortimer|
+|2-87097-008-0|Le mystère de la grande pyramide        |Jacobs    |Jacobs     |Blake et Mortimer|
+|2-87097-010-2|La marque jaune                         |Jacobs    |Jacobs     |Blake et Mortimer|
+|2-87097-043-9|L'Affaire Françis Blake                 |Benoît    |Van Hamme  |Blake et Mortimer|
+|2-87097-052-8|La Machination Voronov                  |Sente     |Juillard   |Blake et Mortimer|
+|2-87097-178-8|La Machination Voronov                  |Sente     |Juillard   |Blake et Mortimer|
+|2-8001-2900-x|Zeke raconte des histoires              |Cosey     |Cosey      |Dupuis           |
+|2-8021-3900-x|Spirou et Fantasio à Tokyo              |NULL      |Benoît     |Dargaud          |
+|2-8031-3900-6|Une dernière aventure d'Astérix         |NULL      |Dupuis     |Dargaud          |
+|2-203-00123-2|Tintin et les Picaros                   |Hergé     |Hergé      |Casterman        |
+|2-203-00117-8|L'Affaire Tournesol                     |Hergé     |Hergé      |Casterman        |
+|2-203-12345-6|Vol 714 pour Sydney                     |Hergé     |Hergé      |Casterman        |
+|2-87097-002-1|Le Secret de l'Espadon tome 1           |Jacobs    |Jacobs     |Blake et Mortimer|
+|2-87097-004-8|Le Secret de L'Espadon tome 2           |Jacobs    |Jacobs     |Blake et Mortimer|
+|2-87097-005-6|Le Secret de L'Espadon tome 3           |Jacobs    |Jacobs     |Blake et Mortimer|
+|2-205-00921-4|Obélix et compagnie                     |Goscinny  |Uderzo     |Le Lombard       |
+|2-86497-020-1|Astérix chez Rahazade                   |Uderzo    |Uderzo     |Albert René      |
+|2-205-01144-8|Le Fil qui chante                       |Goscinny  |Morris     |Dargaud          |
+|2-205-00517-0|Canyon Apache                           |Goscinny  |Morris     |Dupuis           |
+|2-258-03431-0|Adieu Monde Cruel!                      |NULL      |NULL       |Watterson        |
+|2-8001-2850-X|Captives à bord                         |Pellerin  |NULL       |Dupuis           |
+|2-7234-9164-1|La quête d'Ewilan : d'un monde à l'autre|Lylian    |Baldetti   |Glénat           |
+|2-8036-1079-5|Histoire sans héros                     |Van Hamme |NULL       |Le Lombard       |
+|2-8649-7199-3|La galère d'Obélix                      |Uderzo    |NULL       |Albert René      |
+|2-8649-7199-4|La galère d'Obélix                      |Uderzo    |NULL       |Albert René      |
+|2-8649-7266-2|Astérix chez les Pictes                 |Ferri     |Conrad     |Albert René      |
+|1-0347-4357-5|Bad cave                                |NULL      |Midam      |Dupuis           |
+|1-0347-4914-0|On ne parle pas la bouche pleine !      |Janry     |Janry      |Dupuis           |
+|1-0347-3125-1|La vérité sur tout                      |Janry     |Janry      |Dupuis           |
+|2-8649-7596-3|Pas de quartier pour le latin !         |NULL      |NULL       |Albert René      |
+|1-0327-1144-6|De la seconde A au OFA                  |Horikoshi |Horikoshi  |Ki-oon           |
+|2-258-03438-8|En avant, tête de thon !                |NULL      |NULL       |Watterson        |
++-------------+----------------------------------------+----------+-----------+-----------------+
+
+--2.3 (35 rows)
++-------------+------------------------------------+-----------------+
+|isbn         |titre                               |nom              |
++-------------+------------------------------------+-----------------+
+|2-87097-055-9|Joyeux Noël, May                    |Dupuis           |
+|2-203-00105-4|L'Oreille Cassée                    |Casterman        |
+|2-203-00103-8|Les Cigares du Pharaon              |Casterman        |
+|2-203-00107-0|Le Sceptre d'Ottokar                |Casterman        |
+|2-908-46271-0|FAITES GAFFE A LAGAFFE              |Dupuis           |
+|2-8001-0955-6|LA SAGA DES GAFFES                  |Dupuis           |
+|2-8001-0091-5|LE CAS LAGAFFE                      |Dupuis           |
+|2-8001-0019-2|Spirou et les hommes-bulles         |Dupuis           |
+|2-8001-0018-4|L'ombre du Z                        |Dupuis           |
+|2-8001-0017-6|Z comme Zorglub                     |Dupuis           |
+|2-8001-0015-X|Le voyageur du mésozoïque           |Dupuis           |
+|2-8035-0029-9|Modeste et Pompon                   |Magic Strip      |
+|2-87097-017-X|Les 3 Formules du Professeur Sato   |Blake et Mortimer|
+|2-152-12345-X|Les aventures complètes d'Oumpah-Pah|Le Lombard       |
+|2-203-00109-0|Coke en Stock                       |Casterman        |
+|2-87097-009-9|Le mystère de la grande pyramide    |Blake et Mortimer|
+|2-87097-008-0|Le mystère de la grande pyramide    |Blake et Mortimer|
+|2-87097-010-2|La marque jaune                     |Blake et Mortimer|
+|2-87097-043-9|L'Affaire Françis Blake             |Blake et Mortimer|
+|2-87097-052-8|La Machination Voronov              |Blake et Mortimer|
+|2-87097-178-8|La Machination Voronov              |Blake et Mortimer|
+|2-8001-2900-x|Zeke raconte des histoires          |Dupuis           |
+|2-203-00123-2|Tintin et les Picaros               |Casterman        |
+|2-203-00117-8|L'Affaire Tournesol                 |Casterman        |
+|2-203-12345-6|Vol 714 pour Sydney                 |Casterman        |
+|2-87097-002-1|Le Secret de l'Espadon tome 1       |Blake et Mortimer|
+|2-87097-004-8|Le Secret de L'Espadon tome 2       |Blake et Mortimer|
+|2-87097-005-6|Le Secret de L'Espadon tome 3       |Blake et Mortimer|
+|2-205-00921-4|Obélix et compagnie                 |Le Lombard       |
+|2-205-00517-0|Canyon Apache                       |Dupuis           |
+|2-8001-2850-X|Captives à bord                     |Dupuis           |
+|2-8036-1079-5|Histoire sans héros                 |Le Lombard       |
+|1-0347-4357-5|Bad cave                            |Dupuis           |
+|1-0347-4914-0|On ne parle pas la bouche pleine !  |Dupuis           |
+|1-0347-3125-1|La vérité sur tout                  |Dupuis           |
++-------------+------------------------------------+-----------------+
+
+--2.4 (285 rows)
++-------------+----------------------------------------+-----------------+
+|isbn         |titre                                   |nom              |
++-------------+----------------------------------------+-----------------+
+|2-87097-055-9|Joyeux Noël, May                        |Blake et Mortimer|
+|2-87097-055-9|Joyeux Noël, May                        |Dupuis           |
+|2-87097-055-9|Joyeux Noël, May                        |Magic Strip      |
+|2-87097-055-9|Joyeux Noël, May                        |Le Lombard       |
+|2-87097-055-9|Joyeux Noël, May                        |Casterman        |
+|2-205-03043-4|La fiancée de Lucky Luke                |Blake et Mortimer|
+|2-205-03043-4|La fiancée de Lucky Luke                |Dupuis           |
+|2-205-03043-4|La fiancée de Lucky Luke                |Magic Strip      |
+|2-205-03043-4|La fiancée de Lucky Luke                |Le Lombard       |
+|2-205-03043-4|La fiancée de Lucky Luke                |Casterman        |
+|2-88257-000-4|Nitroglycérine                          |Blake et Mortimer|
+|2-88257-000-4|Nitroglycérine                          |Dupuis           |
+|2-88257-000-4|Nitroglycérine                          |Magic Strip      |
+|2-88257-000-4|Nitroglycérine                          |Le Lombard       |
+|2-88257-000-4|Nitroglycérine                          |Casterman        |
+|2-205-00585-5|Ma Dalton                               |Blake et Mortimer|
+|2-205-00585-5|Ma Dalton                               |Dupuis           |
+|2-205-00585-5|Ma Dalton                               |Magic Strip      |
+|2-205-00585-5|Ma Dalton                               |Le Lombard       |
+|2-205-00585-5|Ma Dalton                               |Casterman        |
+|2-205-00920-6|La guérison des Dalton                  |Blake et Mortimer|
+|2-205-00920-6|La guérison des Dalton                  |Dupuis           |
+|2-205-00920-6|La guérison des Dalton                  |Magic Strip      |
+|2-205-00920-6|La guérison des Dalton                  |Le Lombard       |
+|2-205-00920-6|La guérison des Dalton                  |Casterman        |
+|2-203-00105-4|L'Oreille Cassée                        |Blake et Mortimer|
+|2-203-00105-4|L'Oreille Cassée                        |Dupuis           |
+|2-203-00105-4|L'Oreille Cassée                        |Magic Strip      |
+|2-203-00105-4|L'Oreille Cassée                        |Le Lombard       |
+|2-203-00105-4|L'Oreille Cassée                        |Casterman        |
+|2-203-00103-8|Les Cigares du Pharaon                  |Blake et Mortimer|
+|2-203-00103-8|Les Cigares du Pharaon                  |Dupuis           |
+|2-203-00103-8|Les Cigares du Pharaon                  |Magic Strip      |
+|2-203-00103-8|Les Cigares du Pharaon                  |Le Lombard       |
+|2-203-00103-8|Les Cigares du Pharaon                  |Casterman        |
+|2-203-00107-0|Le Sceptre d'Ottokar                    |Blake et Mortimer|
+|2-203-00107-0|Le Sceptre d'Ottokar                    |Dupuis           |
+|2-203-00107-0|Le Sceptre d'Ottokar                    |Magic Strip      |
+|2-203-00107-0|Le Sceptre d'Ottokar                    |Le Lombard       |
+|2-203-00107-0|Le Sceptre d'Ottokar                    |Casterman        |
+|2-908-46271-0|FAITES GAFFE A LAGAFFE                  |Blake et Mortimer|
+|2-908-46271-0|FAITES GAFFE A LAGAFFE                  |Dupuis           |
+|2-908-46271-0|FAITES GAFFE A LAGAFFE                  |Magic Strip      |
+|2-908-46271-0|FAITES GAFFE A LAGAFFE                  |Le Lombard       |
+|2-908-46271-0|FAITES GAFFE A LAGAFFE                  |Casterman        |
+|2-8001-0955-6|LA SAGA DES GAFFES                      |Blake et Mortimer|
+|2-8001-0955-6|LA SAGA DES GAFFES                      |Dupuis           |
+|2-8001-0955-6|LA SAGA DES GAFFES                      |Magic Strip      |
+|2-8001-0955-6|LA SAGA DES GAFFES                      |Le Lombard       |
+|2-8001-0955-6|LA SAGA DES GAFFES                      |Casterman        |
+|2-8001-0091-5|LE CAS LAGAFFE                          |Blake et Mortimer|
+|2-8001-0091-5|LE CAS LAGAFFE                          |Dupuis           |
+|2-8001-0091-5|LE CAS LAGAFFE                          |Magic Strip      |
+|2-8001-0091-5|LE CAS LAGAFFE                          |Le Lombard       |
+|2-8001-0091-5|LE CAS LAGAFFE                          |Casterman        |
+|2-8001-0019-2|Spirou et les hommes-bulles             |Blake et Mortimer|
+|2-8001-0019-2|Spirou et les hommes-bulles             |Dupuis           |
+|2-8001-0019-2|Spirou et les hommes-bulles             |Magic Strip      |
+|2-8001-0019-2|Spirou et les hommes-bulles             |Le Lombard       |
+|2-8001-0019-2|Spirou et les hommes-bulles             |Casterman        |
+|2-8001-0018-4|L'ombre du Z                            |Blake et Mortimer|
+|2-8001-0018-4|L'ombre du Z                            |Dupuis           |
+|2-8001-0018-4|L'ombre du Z                            |Magic Strip      |
+|2-8001-0018-4|L'ombre du Z                            |Le Lombard       |
+|2-8001-0018-4|L'ombre du Z                            |Casterman        |
+|2-8001-0017-6|Z comme Zorglub                         |Blake et Mortimer|
+|2-8001-0017-6|Z comme Zorglub                         |Dupuis           |
+|2-8001-0017-6|Z comme Zorglub                         |Magic Strip      |
+|2-8001-0017-6|Z comme Zorglub                         |Le Lombard       |
+|2-8001-0017-6|Z comme Zorglub                         |Casterman        |
+|2-8001-0015-X|Le voyageur du mésozoïque               |Blake et Mortimer|
+|2-8001-0015-X|Le voyageur du mésozoïque               |Dupuis           |
+|2-8001-0015-X|Le voyageur du mésozoïque               |Magic Strip      |
+|2-8001-0015-X|Le voyageur du mésozoïque               |Le Lombard       |
+|2-8001-0015-X|Le voyageur du mésozoïque               |Casterman        |
+|2-895-00012-3|Idées Noires                            |Blake et Mortimer|
+|2-895-00012-3|Idées Noires                            |Dupuis           |
+|2-895-00012-3|Idées Noires                            |Magic Strip      |
+|2-895-00012-3|Idées Noires                            |Le Lombard       |
+|2-895-00012-3|Idées Noires                            |Casterman        |
+|2-8035-0029-9|Modeste et Pompon                       |Blake et Mortimer|
+|2-8035-0029-9|Modeste et Pompon                       |Dupuis           |
+|2-8035-0029-9|Modeste et Pompon                       |Magic Strip      |
+|2-8035-0029-9|Modeste et Pompon                       |Le Lombard       |
+|2-8035-0029-9|Modeste et Pompon                       |Casterman        |
+|2-86497-004-X|L'odyssée d'Astérix                     |Blake et Mortimer|
+|2-86497-004-X|L'odyssée d'Astérix                     |Dupuis           |
+|2-86497-004-X|L'odyssée d'Astérix                     |Magic Strip      |
+|2-86497-004-X|L'odyssée d'Astérix                     |Le Lombard       |
+|2-86497-004-X|L'odyssée d'Astérix                     |Casterman        |
+|2-205-00096-9|Astérix le gaulois                      |Blake et Mortimer|
+|2-205-00096-9|Astérix le gaulois                      |Dupuis           |
+|2-205-00096-9|Astérix le gaulois                      |Magic Strip      |
+|2-205-00096-9|Astérix le gaulois                      |Le Lombard       |
+|2-205-00096-9|Astérix le gaulois                      |Casterman        |
+|2-205-00600-2|Les lauriers de César                   |Blake et Mortimer|
+|2-205-00600-2|Les lauriers de César                   |Dupuis           |
+|2-205-00600-2|Les lauriers de César                   |Magic Strip      |
+|2-205-00600-2|Les lauriers de César                   |Le Lombard       |
+|2-205-00600-2|Les lauriers de César                   |Casterman        |
+|2-205-00230-9|Astérix légionnaire                     |Blake et Mortimer|
+|2-205-00230-9|Astérix légionnaire                     |Dupuis           |
+|2-205-00230-9|Astérix légionnaire                     |Magic Strip      |
+|2-205-00230-9|Astérix légionnaire                     |Le Lombard       |
+|2-205-00230-9|Astérix légionnaire                     |Casterman        |
+|2-87097-017-X|Les 3 Formules du Professeur Sato       |Blake et Mortimer|
+|2-87097-017-X|Les 3 Formules du Professeur Sato       |Dupuis           |
+|2-87097-017-X|Les 3 Formules du Professeur Sato       |Magic Strip      |
+|2-87097-017-X|Les 3 Formules du Professeur Sato       |Le Lombard       |
+|2-87097-017-X|Les 3 Formules du Professeur Sato       |Casterman        |
+|2-152-12345-X|Les aventures complètes d'Oumpah-Pah    |Blake et Mortimer|
+|2-152-12345-X|Les aventures complètes d'Oumpah-Pah    |Dupuis           |
+|2-152-12345-X|Les aventures complètes d'Oumpah-Pah    |Magic Strip      |
+|2-152-12345-X|Les aventures complètes d'Oumpah-Pah    |Le Lombard       |
+|2-152-12345-X|Les aventures complètes d'Oumpah-Pah    |Casterman        |
+|2-203-00109-0|Coke en Stock                           |Blake et Mortimer|
+|2-203-00109-0|Coke en Stock                           |Dupuis           |
+|2-203-00109-0|Coke en Stock                           |Magic Strip      |
+|2-203-00109-0|Coke en Stock                           |Le Lombard       |
+|2-203-00109-0|Coke en Stock                           |Casterman        |
+|2-205-01150-2|Astérix chez les Belges                 |Blake et Mortimer|
+|2-205-01150-2|Astérix chez les Belges                 |Dupuis           |
+|2-205-01150-2|Astérix chez les Belges                 |Magic Strip      |
+|2-205-01150-2|Astérix chez les Belges                 |Le Lombard       |
+|2-205-01150-2|Astérix chez les Belges                 |Casterman        |
+|2-87097-009-9|Le mystère de la grande pyramide        |Blake et Mortimer|
+|2-87097-009-9|Le mystère de la grande pyramide        |Dupuis           |
+|2-87097-009-9|Le mystère de la grande pyramide        |Magic Strip      |
+|2-87097-009-9|Le mystère de la grande pyramide        |Le Lombard       |
+|2-87097-009-9|Le mystère de la grande pyramide        |Casterman        |
+|2-87097-008-0|Le mystère de la grande pyramide        |Blake et Mortimer|
+|2-87097-008-0|Le mystère de la grande pyramide        |Dupuis           |
+|2-87097-008-0|Le mystère de la grande pyramide        |Magic Strip      |
+|2-87097-008-0|Le mystère de la grande pyramide        |Le Lombard       |
+|2-87097-008-0|Le mystère de la grande pyramide        |Casterman        |
+|2-87097-010-2|La marque jaune                         |Blake et Mortimer|
+|2-87097-010-2|La marque jaune                         |Dupuis           |
+|2-87097-010-2|La marque jaune                         |Magic Strip      |
+|2-87097-010-2|La marque jaune                         |Le Lombard       |
+|2-87097-010-2|La marque jaune                         |Casterman        |
+|2-87097-043-9|L'Affaire Françis Blake                 |Blake et Mortimer|
+|2-87097-043-9|L'Affaire Françis Blake                 |Dupuis           |
+|2-87097-043-9|L'Affaire Françis Blake                 |Magic Strip      |
+|2-87097-043-9|L'Affaire Françis Blake                 |Le Lombard       |
+|2-87097-043-9|L'Affaire Françis Blake                 |Casterman        |
+|2-87097-052-8|La Machination Voronov                  |Blake et Mortimer|
+|2-87097-052-8|La Machination Voronov                  |Dupuis           |
+|2-87097-052-8|La Machination Voronov                  |Magic Strip      |
+|2-87097-052-8|La Machination Voronov                  |Le Lombard       |
+|2-87097-052-8|La Machination Voronov                  |Casterman        |
+|2-87097-178-8|La Machination Voronov                  |Blake et Mortimer|
+|2-87097-178-8|La Machination Voronov                  |Dupuis           |
+|2-87097-178-8|La Machination Voronov                  |Magic Strip      |
+|2-87097-178-8|La Machination Voronov                  |Le Lombard       |
+|2-87097-178-8|La Machination Voronov                  |Casterman        |
+|2-8001-2900-x|Zeke raconte des histoires              |Blake et Mortimer|
+|2-8001-2900-x|Zeke raconte des histoires              |Dupuis           |
+|2-8001-2900-x|Zeke raconte des histoires              |Magic Strip      |
+|2-8001-2900-x|Zeke raconte des histoires              |Le Lombard       |
+|2-8001-2900-x|Zeke raconte des histoires              |Casterman        |
+|2-8021-3900-x|Spirou et Fantasio à Tokyo              |Blake et Mortimer|
+|2-8021-3900-x|Spirou et Fantasio à Tokyo              |Dupuis           |
+|2-8021-3900-x|Spirou et Fantasio à Tokyo              |Magic Strip      |
+|2-8021-3900-x|Spirou et Fantasio à Tokyo              |Le Lombard       |
+|2-8021-3900-x|Spirou et Fantasio à Tokyo              |Casterman        |
+|2-8031-3900-6|Une dernière aventure d'Astérix         |Blake et Mortimer|
+|2-8031-3900-6|Une dernière aventure d'Astérix         |Dupuis           |
+|2-8031-3900-6|Une dernière aventure d'Astérix         |Magic Strip      |
+|2-8031-3900-6|Une dernière aventure d'Astérix         |Le Lombard       |
+|2-8031-3900-6|Une dernière aventure d'Astérix         |Casterman        |
+|2-203-00123-2|Tintin et les Picaros                   |Blake et Mortimer|
+|2-203-00123-2|Tintin et les Picaros                   |Dupuis           |
+|2-203-00123-2|Tintin et les Picaros                   |Magic Strip      |
+|2-203-00123-2|Tintin et les Picaros                   |Le Lombard       |
+|2-203-00123-2|Tintin et les Picaros                   |Casterman        |
+|2-203-00117-8|L'Affaire Tournesol                     |Blake et Mortimer|
+|2-203-00117-8|L'Affaire Tournesol                     |Dupuis           |
+|2-203-00117-8|L'Affaire Tournesol                     |Magic Strip      |
+|2-203-00117-8|L'Affaire Tournesol                     |Le Lombard       |
+|2-203-00117-8|L'Affaire Tournesol                     |Casterman        |
+|2-203-12345-6|Vol 714 pour Sydney                     |Blake et Mortimer|
+|2-203-12345-6|Vol 714 pour Sydney                     |Dupuis           |
+|2-203-12345-6|Vol 714 pour Sydney                     |Magic Strip      |
+|2-203-12345-6|Vol 714 pour Sydney                     |Le Lombard       |
+|2-203-12345-6|Vol 714 pour Sydney                     |Casterman        |
+|2-87097-002-1|Le Secret de l'Espadon tome 1           |Blake et Mortimer|
+|2-87097-002-1|Le Secret de l'Espadon tome 1           |Dupuis           |
+|2-87097-002-1|Le Secret de l'Espadon tome 1           |Magic Strip      |
+|2-87097-002-1|Le Secret de l'Espadon tome 1           |Le Lombard       |
+|2-87097-002-1|Le Secret de l'Espadon tome 1           |Casterman        |
+|2-87097-004-8|Le Secret de L'Espadon tome 2           |Blake et Mortimer|
+|2-87097-004-8|Le Secret de L'Espadon tome 2           |Dupuis           |
+|2-87097-004-8|Le Secret de L'Espadon tome 2           |Magic Strip      |
+|2-87097-004-8|Le Secret de L'Espadon tome 2           |Le Lombard       |
+|2-87097-004-8|Le Secret de L'Espadon tome 2           |Casterman        |
+|2-87097-005-6|Le Secret de L'Espadon tome 3           |Blake et Mortimer|
+|2-87097-005-6|Le Secret de L'Espadon tome 3           |Dupuis           |
+|2-87097-005-6|Le Secret de L'Espadon tome 3           |Magic Strip      |
+|2-87097-005-6|Le Secret de L'Espadon tome 3           |Le Lombard       |
+|2-87097-005-6|Le Secret de L'Espadon tome 3           |Casterman        |
+|2-205-00921-4|Obélix et compagnie                     |Blake et Mortimer|
+|2-205-00921-4|Obélix et compagnie                     |Dupuis           |
+|2-205-00921-4|Obélix et compagnie                     |Magic Strip      |
+|2-205-00921-4|Obélix et compagnie                     |Le Lombard       |
+|2-205-00921-4|Obélix et compagnie                     |Casterman        |
+|2-86497-020-1|Astérix chez Rahazade                   |Blake et Mortimer|
+|2-86497-020-1|Astérix chez Rahazade                   |Dupuis           |
+|2-86497-020-1|Astérix chez Rahazade                   |Magic Strip      |
+|2-86497-020-1|Astérix chez Rahazade                   |Le Lombard       |
+|2-86497-020-1|Astérix chez Rahazade                   |Casterman        |
+|2-205-01144-8|Le Fil qui chante                       |Blake et Mortimer|
+|2-205-01144-8|Le Fil qui chante                       |Dupuis           |
+|2-205-01144-8|Le Fil qui chante                       |Magic Strip      |
+|2-205-01144-8|Le Fil qui chante                       |Le Lombard       |
+|2-205-01144-8|Le Fil qui chante                       |Casterman        |
+|2-205-00517-0|Canyon Apache                           |Blake et Mortimer|
+|2-205-00517-0|Canyon Apache                           |Dupuis           |
+|2-205-00517-0|Canyon Apache                           |Magic Strip      |
+|2-205-00517-0|Canyon Apache                           |Le Lombard       |
+|2-205-00517-0|Canyon Apache                           |Casterman        |
+|2-258-03431-0|Adieu Monde Cruel!                      |Blake et Mortimer|
+|2-258-03431-0|Adieu Monde Cruel!                      |Dupuis           |
+|2-258-03431-0|Adieu Monde Cruel!                      |Magic Strip      |
+|2-258-03431-0|Adieu Monde Cruel!                      |Le Lombard       |
+|2-258-03431-0|Adieu Monde Cruel!                      |Casterman        |
+|2-8001-2850-X|Captives à bord                         |Blake et Mortimer|
+|2-8001-2850-X|Captives à bord                         |Dupuis           |
+|2-8001-2850-X|Captives à bord                         |Magic Strip      |
+|2-8001-2850-X|Captives à bord                         |Le Lombard       |
+|2-8001-2850-X|Captives à bord                         |Casterman        |
+|2-7234-9164-1|La quête d'Ewilan : d'un monde à l'autre|Blake et Mortimer|
+|2-7234-9164-1|La quête d'Ewilan : d'un monde à l'autre|Dupuis           |
+|2-7234-9164-1|La quête d'Ewilan : d'un monde à l'autre|Magic Strip      |
+|2-7234-9164-1|La quête d'Ewilan : d'un monde à l'autre|Le Lombard       |
+|2-7234-9164-1|La quête d'Ewilan : d'un monde à l'autre|Casterman        |
+|2-8036-1079-5|Histoire sans héros                     |Blake et Mortimer|
+|2-8036-1079-5|Histoire sans héros                     |Dupuis           |
+|2-8036-1079-5|Histoire sans héros                     |Magic Strip      |
+|2-8036-1079-5|Histoire sans héros                     |Le Lombard       |
+|2-8036-1079-5|Histoire sans héros                     |Casterman        |
+|2-8649-7199-3|La galère d'Obélix                      |Blake et Mortimer|
+|2-8649-7199-3|La galère d'Obélix                      |Dupuis           |
+|2-8649-7199-3|La galère d'Obélix                      |Magic Strip      |
+|2-8649-7199-3|La galère d'Obélix                      |Le Lombard       |
+|2-8649-7199-3|La galère d'Obélix                      |Casterman        |
+|2-8649-7199-4|La galère d'Obélix                      |Blake et Mortimer|
+|2-8649-7199-4|La galère d'Obélix                      |Dupuis           |
+|2-8649-7199-4|La galère d'Obélix                      |Magic Strip      |
+|2-8649-7199-4|La galère d'Obélix                      |Le Lombard       |
+|2-8649-7199-4|La galère d'Obélix                      |Casterman        |
+|2-8649-7266-2|Astérix chez les Pictes                 |Blake et Mortimer|
+|2-8649-7266-2|Astérix chez les Pictes                 |Dupuis           |
+|2-8649-7266-2|Astérix chez les Pictes                 |Magic Strip      |
+|2-8649-7266-2|Astérix chez les Pictes                 |Le Lombard       |
+|2-8649-7266-2|Astérix chez les Pictes                 |Casterman        |
+|1-0347-4357-5|Bad cave                                |Blake et Mortimer|
+|1-0347-4357-5|Bad cave                                |Dupuis           |
+|1-0347-4357-5|Bad cave                                |Magic Strip      |
+|1-0347-4357-5|Bad cave                                |Le Lombard       |
+|1-0347-4357-5|Bad cave                                |Casterman        |
+|1-0347-4914-0|On ne parle pas la bouche pleine !      |Blake et Mortimer|
+|1-0347-4914-0|On ne parle pas la bouche pleine !      |Dupuis           |
+|1-0347-4914-0|On ne parle pas la bouche pleine !      |Magic Strip      |
+|1-0347-4914-0|On ne parle pas la bouche pleine !      |Le Lombard       |
+|1-0347-4914-0|On ne parle pas la bouche pleine !      |Casterman        |
+|1-0347-3125-1|La vérité sur tout                      |Blake et Mortimer|
+|1-0347-3125-1|La vérité sur tout                      |Dupuis           |
+|1-0347-3125-1|La vérité sur tout                      |Magic Strip      |
+|1-0347-3125-1|La vérité sur tout                      |Le Lombard       |
+|1-0347-3125-1|La vérité sur tout                      |Casterman        |
+|2-8649-7596-3|Pas de quartier pour le latin !         |Blake et Mortimer|
+|2-8649-7596-3|Pas de quartier pour le latin !         |Dupuis           |
+|2-8649-7596-3|Pas de quartier pour le latin !         |Magic Strip      |
+|2-8649-7596-3|Pas de quartier pour le latin !         |Le Lombard       |
+|2-8649-7596-3|Pas de quartier pour le latin !         |Casterman        |
+|1-0327-1144-6|De la seconde A au OFA                  |Blake et Mortimer|
+|1-0327-1144-6|De la seconde A au OFA                  |Dupuis           |
+|1-0327-1144-6|De la seconde A au OFA                  |Magic Strip      |
+|1-0327-1144-6|De la seconde A au OFA                  |Le Lombard       |
+|1-0327-1144-6|De la seconde A au OFA                  |Casterman        |
+|2-258-03438-8|En avant, tête de thon !                |Blake et Mortimer|
+|2-258-03438-8|En avant, tête de thon !                |Dupuis           |
+|2-258-03438-8|En avant, tête de thon !                |Magic Strip      |
+|2-258-03438-8|En avant, tête de thon !                |Le Lombard       |
+|2-258-03438-8|En avant, tête de thon !                |Casterman        |
++-------------+----------------------------------------+-----------------+
+
+--2.5 (6 rows)
++-------------+-----------------------+
+|isbn         |titre                  |
++-------------+-----------------------+
+|2-86497-004-X|L'odyssée d'Astérix    |
+|2-205-00921-4|Obélix et compagnie    |
+|2-86497-020-1|Astérix chez Rahazade  |
+|2-8649-7199-3|La galère d'Obélix     |
+|2-8649-7199-4|La galère d'Obélix     |
+|2-8649-7266-2|Astérix chez les Pictes|
++-------------+-----------------------+
+
+--2.6 (1 row)
++----------+------+
+|id_editeur|nom   |
++----------+------+
+|4         |Dupuis|
++----------+------+
+
+--2.7 (3 rows)
++----------+-----------+
+|id_editeur|nom        |
++----------+-----------+
+|1         |Albert René|
+|2         |Dargaud    |
+|6         |Le Lombard |
++----------+-----------+
+
+--2.8 (7 rows)
++----------+-----------------+
+|id_editeur|nom              |
++----------+-----------------+
+|3         |Blake et Mortimer|
+|4         |Dupuis           |
+|5         |Magic Strip      |
+|6         |Le Lombard       |
+|7         |Casterman        |
+|11        |Glénat           |
+|12        |Ki-oon           |
++----------+-----------------+
+
+
+--2.9 (35 rows)
++-------------+------------------------------------+---------------------------+----------+-----------+---------+-------+------------+----+
+|isbn         |titre                               |serie                      |scenariste|dessinateur|coloriste|editeur|date_edition|prix|
++-------------+------------------------------------+---------------------------+----------+-----------+---------+-------+------------+----+
+|2-87097-055-9|Joyeux Noël, May                    |null                       |Cosey     |Cosey      |Cosey    |4      |1998-11-07  |7   |
+|2-205-03043-4|La fiancée de Lucky Luke            |Lucky Luke                 |Guy Vidal |Morris     |Guy Vidal|2      |1985-03-01  |5   |
+|2-88257-000-4|Nitroglycérine                      |Lucky Luke                 |Guy Vidal |Morris     |null     |2      |1987-07-03  |5   |
+|2-205-00585-5|Ma Dalton                           |Lucky Luke                 |Goscinny  |Morris     |null     |2      |1980-06-05  |5   |
+|2-205-00920-6|La guérison des Dalton              |Lucky Luke                 |Goscinny  |Morris     |null     |2      |1978-06-28  |5   |
+|2-908-46271-0|FAITES GAFFE A LAGAFFE              |Gaston                     |Franquin  |Franquin   |Fanny    |4      |1996-11-13  |6   |
+|2-8001-0955-6|LA SAGA DES GAFFES                  |Gaston                     |Franquin  |Franquin   |null     |4      |1982-12-01  |6   |
+|2-8001-0091-5|LE CAS LAGAFFE                      |Gaston                     |null      |Franquin   |null     |4      |1977-01-01  |6   |
+|2-8001-0019-2|Spirou et les hommes-bulles         |Spirou                     |Franquin  |Franquin   |null     |4      |1986-01-01  |7   |
+|2-8001-0018-4|L'ombre du Z                        |Spirou                     |Jidehem   |Franquin   |null     |4      |1976-04-01  |7   |
+|2-8001-0017-6|Z comme Zorglub                     |Spirou                     |null      |Franquin   |null     |4      |1977-08-24  |7   |
+|2-8001-0015-X|Le voyageur du mésozoïque           |Spirou                     |null      |Franquin   |null     |4      |1977-12-14  |7   |
+|2-895-00012-3|Idées Noires                        |null                       |null      |Franquin   |null     |8      |1981-10-05  |10  |
+|2-8035-0029-9|Modeste et Pompon                   |Modeste                    |null      |Franquin   |null     |5      |1981-10-05  |12  |
+|2-87097-017-X|Les 3 Formules du Professeur Sato   |Blake et Mortimer          |Jacobs    |Jacobs     |de Moor  |3      |1990-01-01  |12  |
+|2-152-12345-X|Les aventures complètes d'Oumpah-Pah|OUMPAH-PAH                 |Goscinny  |Uderzo     |null     |6      |1980-12-31  |12  |
+|2-87097-009-9|Le mystère de la grande pyramide    |Blake et Mortimer          |Jacobs    |Jacobs     |null     |3      |1987-04-04  |10  |
+|2-87097-008-0|Le mystère de la grande pyramide    |Blake et Mortimer          |Jacobs    |Jacobs     |null     |3      |1986-12-31  |10  |
+|2-87097-010-2|La marque jaune                     |Blake et Mortimer          |Jacobs    |Jacobs     |null     |3      |1987-12-15  |9   |
+|2-87097-043-9|L'Affaire Françis Blake             |Blake et Mortimer          |Benoît    |Van Hamme  |null     |3      |1996-09-19  |14  |
+|2-87097-052-8|La Machination Voronov              |Blake et Mortimer          |Sente     |Juillard   |DeMille  |3      |2000-01-01  |14  |
+|2-87097-178-8|La Machination Voronov              |Blake et Mortimer          |Sente     |Juillard   |DeMille  |3      |2013-10-07  |16  |
+|2-8001-2900-x|Zeke raconte des histoires          |null                       |Cosey     |Cosey      |Cosey    |4      |1999-12-31  |14  |
+|2-8021-3900-x|Spirou et Fantasio à Tokyo          |Dupuis                     |null      |Benoît     |null     |2      |2001-09-20  |14  |
+|2-87097-002-1|Le Secret de l'Espadon tome 1       |Blake et Mortimer          |Jacobs    |Jacobs     |null     |3      |1984-01-15  |9   |
+|2-87097-004-8|Le Secret de L'Espadon tome 2       |Blake et Mortimer          |Jacobs    |Jacobs     |null     |3      |1985-02-22  |9   |
+|2-87097-005-6|Le Secret de L'Espadon tome 3       |Blake et Mortimer          |Jacobs    |Jacobs     |null     |3      |1986-03-29  |9   |
+|2-205-01144-8|Le Fil qui chante                   |Lucky Luke                 |Goscinny  |Morris     |null     |2      |1977-12-31  |5   |
+|2-205-00517-0|Canyon Apache                       |Lucky Luke                 |Goscinny  |Morris     |null     |4      |1975-09-18  |8   |
+|2-8001-2850-X|Captives à bord                     |null                       |Pellerin  |null       |Pellerin |4      |1999-10-01  |12  |
+|2-8036-1079-5|Histoire sans héros                 |null                       |Van Hamme |null       |null     |6      |null        |16  |
+|1-0347-4357-5|Bad cave                            |Game Over                  |null      |Midam      |Midam    |4      |2019-10-31  |11.9|
+|1-0347-4914-0|On ne parle pas la bouche pleine !  |Le petit Spirou            |Janry     |Janry      |Janry    |4      |2022-10-14  |11.9|
+|1-0347-3125-1|La vérité sur tout                  |Le petit Spirou            |Janry     |Janry      |Janry    |4      |2019-11-15  |11.9|
+|2-8649-7596-3|Pas de quartier pour le latin !     |Idéfix et les irréductibles|null      |null       |Bastide  |1      |2021-06-16  |8.99|
++-------------+------------------------------------+---------------------------+----------+-----------+---------+-------+------------+----+
+
+--2.10 (5 rows)
++-----------+
+|dessinateur|
++-----------+
+|Cosey      |
+|Franquin   |
+|Janry      |
+|Midam      |
+|Morris     |
++-----------+
+
+--2.11 (4 rows)
++-------------+--------------------------+-----------+------------+
+|isbn         |titre                     |dessinateur|date_edition|
++-------------+--------------------------+-----------+------------+
+|2-87097-055-9|Joyeux Noël, May          |Cosey      |1998-11-07  |
+|2-8001-2900-x|Zeke raconte des histoires|Cosey      |1999-12-31  |
+|2-908-46271-0|FAITES GAFFE A LAGAFFE    |Franquin   |1996-11-13  |
+|2-8001-2850-X|Captives à bord           |null       |1999-10-01  |
++-------------+--------------------------+-----------+------------+
+
+--2.12 (1 row)
++----------+---------+
+|id_editeur|nom      |
++----------+---------+
+|9         |Watterson|
++----------+---------+
+
+--2.13 (10 rows)
++-------------+---------------------------------+
+|isbn         |titre                            |
++-------------+---------------------------------+
+|2-87097-017-X|Les 3 Formules du Professeur Sato|
+|2-87097-009-9|Le mystère de la grande pyramide |
+|2-87097-008-0|Le mystère de la grande pyramide |
+|2-87097-010-2|La marque jaune                  |
+|2-87097-043-9|L'Affaire Françis Blake          |
+|2-87097-052-8|La Machination Voronov           |
+|2-87097-178-8|La Machination Voronov           |
+|2-87097-002-1|Le Secret de l'Espadon tome 1    |
+|2-87097-004-8|Le Secret de L'Espadon tome 2    |
+|2-87097-005-6|Le Secret de L'Espadon tome 3    |
++-------------+---------------------------------+
+
+--2.14 (2 rows)
++------+
+|nom   |
++------+
+|Jacobs|
+|Dupuis|
++------+
+
+--2.15
++------------------+
+|date_dernier_album|
++------------------+
+|2013-10-24        |
++------------------+
+
+--2.16
++---------+
+|nb_albums|
++---------+
+|7        |
++---------+
+
+--2.17
++---------------------+
+|edition_plus_ancienne|
++---------------------+
+|1947-01-14           |
++---------------------+
+
+--2.18
++-----------------+
+|prix_moyen       |
++-----------------+
+|7.849444444444446|
++-----------------+
+
+--2.19
++------------------------------+
+|date_edition_album_plus_ancien|
++------------------------------+
+|1977-12-31                    |
++------------------------------+
+
+--2.20
++---------+
+|nb_albums|
++---------+
+|2        |
++---------+
+
+--2.21
++----------------+-------------+-----------------+
+|prix_tous_albums|nombre_albums|prix_moyen       |
++----------------+-------------+-----------------+
+|59              |9            |6.555555555555555|
++----------------+-------------+-----------------+
+
+--2.22
++-------------+
+|nombre_annees|
++-------------+
+|15           |
++-------------+
+
+--2.23 (2 rows)
++-------------+------------------------+----------------+----------+-----------+---------+-------+------------+----+
+|isbn         |titre                   |serie           |scenariste|dessinateur|coloriste|editeur|date_edition|prix|
++-------------+------------------------+----------------+----------+-----------+---------+-------+------------+----+
+|2-895-00012-3|Idées Noires            |null            |null      |Franquin   |null     |8      |1981-10-05  |10  |
+|2-258-03438-8|En avant, tête de thon !|Calvin et Hobbes|null      |null       |null     |9      |1991-10-01  |10  |
++-------------+------------------------+----------------+----------+-----------+---------+-------+------------+----+
+
+
+
+
+
+
+
+
+
+
+
+
