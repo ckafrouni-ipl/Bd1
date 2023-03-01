@@ -1,0 +1,282 @@
++-------------------------------------+
+|BD1 Solution des requêtes de niveau 3|
++-------------------------------------+
+
+--3.1 (3 rows)
++----------+----------+----------+----+
+|id_editeur|nom       |adresse   |pays|
++----------+----------+----------+----+
+|2         |Dargaud   |null      |fr  |
+|4         |Dupuis    |Marcinelle|be  |
+|6         |Le Lombard|Bruxelles |be  |
++----------+----------+----------+----+
+
+--3.2 (1 row)
++---------+------+------+
+|id_auteur|nom   |e_mail|
++---------+------+------+
+|1        |Uderzo|null  |
++---------+------+------+
+
+--3.3 (12 rows)
++---------+---------+-----------------+
+|id_auteur|nom      |e_mail           |
++---------+---------+-----------------+
+|4        |Franquin |null             |
+|12       |Fanny    |fanny@gmail.com  |
+|14       |Cosey    |cosey@hotmail.com|
+|15       |Morris   |null             |
+|18       |Pellerin |pellerin@yahoo.fr|
+|24       |Midam    |midam@skynet.be  |
+|25       |Janry    |janry@hotmail.com|
+|29       |Adam     |null             |
+|30       |Ben BK   |benbk@hotmail.com|
+|32       |Dan      |null             |
+|33       |Angèle   |angele@gmail.com |
+|35       |De Becker|null             |
++---------+---------+-----------------+
+
+--3.4 (19 rows)
++---------+---------+---------+
+|id_auteur|nom      |nb_albums|
++---------+---------+---------+
+|4        |Franquin |3        |
+|34       |Gof      |2        |
+|7        |Sente    |2        |
+|10       |Benoît   |1        |
+|24       |Midam    |4        |
+|19       |Lylian   |1        |
+|25       |Janry    |4        |
+|31       |Patelin  |3        |
+|14       |Cosey    |2        |
+|3        |Hergé    |7        |
+|22       |Ferri    |1        |
+|13       |Jidehem  |1        |
+|1        |Uderzo   |4        |
+|5        |Jacobs   |7        |
+|18       |Pellerin |1        |
+|2        |Goscinny |10       |
+|16       |Guy Vidal|2        |
+|27       |Horikoshi|1        |
+|11       |Van Hamme|1        |
++---------+---------+---------+
+
+--3.5 (3 rows)
++----------+-----------------+----+----------------+----------------+
+|id_editeur|nom              |pays|date plus ancien|date plus récent|
++----------+-----------------+----+----------------+----------------+
+|4         |Dupuis           |be  |1975-09-18      |2022-11-15      |
+|2         |Dargaud          |fr  |1975-06-16      |2006-10-27      |
+|3         |Blake et Mortimer|be  |1984-01-15      |2013-10-07      |
++----------+-----------------+----+----------------+----------------+
+
+--3.6 (14 rows)
++---------------------------+---------+-----------------+
+|nom                        |nb albums|prix total       |
++---------------------------+---------+-----------------+
+|Astérix                    |11       |89.30000000000001|
+|Blake et Mortimer          |10       |112              |
+|Tintin                     |7        |56               |
+|Le petit Spirou            |6        |70.4             |
+|Lucky Luke                 |6        |33               |
+|Spirou                     |4        |28               |
+|Gaston                     |3        |18               |
+|Game Over                  |3        |36.8             |
+|Calvin et Hobbes           |2        |19               |
+|Dupuis                     |1        |14               |
+|Modeste                    |1        |12               |
+|OUMPAH-PAH                 |1        |12               |
+|My Hero Academia           |1        |6.6              |
+|Idéfix et les irréductibles|1        |8.99             |
++---------------------------+---------+-----------------+
+
+
+--3.7 (10 rows)
++---------+---------+-----------------+
+|date_part|nb albums|prix moyen       |
++---------+---------+-----------------+
+|1976     |3        |7                |
+|1977     |3        |6.666666666666667|
+|1986     |3        |8.666666666666666|
+|1987     |2        |9.5              |
+|1996     |2        |10               |
+|1999     |2        |13               |
+|2011     |2        |11.25            |
+|2012     |2        |12.05            |
+|2019     |2        |11.9             |
+|2022     |2        |12.4             |
++---------+---------+-----------------+
+
+--3.8 
++----------+
+|nb auteurs|
++----------+
+|1         |
++----------+
+
+--3.9 (1 row)
++-------------+---------------------+----+
+|isbn         |titre                |prix|
++-------------+---------------------+----+
+|2-86497-020-1|Astérix chez Rahazade|6   |
++-------------+---------------------+----+
+
+--3.10 (25 rows)
++-------------+------------------------------------+-----------------+----+----------+
+|isbn         |titre                               |nom              |prix|nb_auteurs|
++-------------+------------------------------------+-----------------+----+----------+
+|1-0347-5432-8|Deep impact                         |Game Over        |12.4|4         |
+|2-152-12345-X|Les aventures complètes d'Oumpah-Pah|OUMPAH-PAH       |12  |2         |
+|2-205-00096-9|Astérix le gaulois                  |Astérix          |6   |2         |
+|2-205-00230-9|Astérix légionnaire                 |Astérix          |6   |2         |
+|2-205-00517-0|Canyon Apache                       |Lucky Luke       |8   |2         |
+|2-205-00585-5|Ma Dalton                           |Lucky Luke       |5   |2         |
+|2-205-00600-2|Les lauriers de César               |Astérix          |6   |2         |
+|2-205-00920-6|La guérison des Dalton              |Lucky Luke       |5   |2         |
+|2-205-00921-4|Obélix et compagnie                 |Astérix          |6   |2         |
+|2-205-01144-8|Le Fil qui chante                   |Lucky Luke       |5   |2         |
+|2-205-01150-2|Astérix chez les Belges             |Astérix          |4   |2         |
+|2-205-03043-4|La fiancée de Lucky Luke            |Lucky Luke       |5   |2         |
+|2-8001-0018-4|L'ombre du Z                        |Spirou           |7   |2         |
+|2-8001-4707-9|Tiens-toi droit !                   |Le petit Spirou  |12.5|2         |
+|2-8001-5695-8|T'es gonflé !                       |Game Over        |12.5|3         |
+|2-8649-7266-2|Astérix chez les Pictes             |Astérix          |10.5|3         |
+|2-87097-017-X|Les 3 Formules du Professeur Sato   |Blake et Mortimer|12  |2         |
+|2-87097-043-9|L'Affaire Françis Blake             |Blake et Mortimer|14  |2         |
+|2-87097-052-8|La Machination Voronov              |Blake et Mortimer|14  |3         |
+|2-87097-178-8|La Machination Voronov              |Blake et Mortimer|16  |3         |
+|2-88257-000-4|Nitroglycérine                      |Lucky Luke       |5   |2         |
+|2-908-46271-0|FAITES GAFFE A LAGAFFE              |Gaston           |6   |2         |
+|2-9306-1805-0|Sound of silence                    |Le petit Spirou  |10.9|6         |
+|2-9306-1814-2|Only for your eyes                  |Le petit Spirou  |11.6|3         |
+|2-9306-1825-8|Cold case affaires glacées          |Le petit Spirou  |11.6|4         |
++-------------+------------------------------------+-----------------+----+----------+
+
+--3.11 (9 rows)
++----------+-----------------+-----+
+|id_editeur|nom              |count|
++----------+-----------------+-----+
+|4         |Dupuis           |5    |
+|2         |Dargaud          |3    |
+|1         |Albert René      |2    |
+|6         |Le Lombard       |2    |
+|3         |Blake et Mortimer|1    |
+|7         |Casterman        |1    |
+|12        |Ki-oon           |1    |
+|5         |Magic Strip      |1    |
+|9         |Watterson        |1    |
++----------+-----------------+-----+
+
+--3.12 (13 rows)
++-------------+----------------------------------+-----+-------+------------+----+
+|isbn         |titre                             |serie|editeur|date_edition|prix|
++-------------+----------------------------------+-----+-------+------------+----+
+|1-0347-3125-1|La vérité sur tout                |12   |4      |2019-11-15  |11.9|
+|1-0347-4357-5|Bad cave                          |11   |4      |2019-10-31  |11.9|
+|1-0347-4914-0|On ne parle pas la bouche pleine !|12   |4      |2022-10-14  |11.9|
+|1-0347-5432-8|Deep impact                       |11   |4      |2021-01-15  |12.4|
+|1-0347-6312-2|Silence of the lamps              |null |4      |2022-11-15  |12.9|
+|2-8001-2850-X|Captives à bord                   |null |4      |1999-10-01  |12  |
+|2-8001-2900-x|Zeke raconte des histoires        |null |4      |1999-12-31  |14  |
+|2-8001-5695-8|T'es gonflé !                     |11   |4      |2012-11-02  |12.5|
+|2-87097-055-9|Joyeux Noël, May                  |null |4      |1998-11-07  |7   |
+|2-908-46271-0|FAITES GAFFE A LAGAFFE            |3    |4      |1996-11-13  |6   |
+|2-9306-1805-0|Sound of silence                  |12   |4      |2011-03-21  |10.9|
+|2-9306-1814-2|Only for your eyes                |12   |4      |2011-11-21  |11.6|
+|2-9306-1825-8|Cold case affaires glacées        |12   |4      |2012-08-04  |11.6|
++-------------+----------------------------------+-----+-------+------------+----+
+
+--3.13 
++-----------------+
+|date plus récente|
++-----------------+
+|1980-12-31       |
++-----------------+
+
+--3.14 (3 rows)
++---------+--------+
+|id_auteur|nom     |
++---------+--------+
+|1        |Uderzo  |
+|2        |Goscinny|
+|17       |Dupuis  |
++---------+--------+
+
+--3.15 (2 rows)
++----+
+|role|
++----+
+|c   |
+|d   |
++----+
+
+--3.16 (10 rows)
++---------+---------+---------------------+
+|id_auteur|nom      |e_mail               |
++---------+---------+---------------------+
+|1        |Uderzo   |null                 |
+|3        |Hergé    |null                 |
+|4        |Franquin |null                 |
+|5        |Jacobs   |null                 |
+|14       |Cosey    |cosey@hotmail.com    |
+|16       |Guy Vidal|null                 |
+|18       |Pellerin |pellerin@yahoo.fr    |
+|24       |Midam    |midam@skynet.be      |
+|25       |Janry    |janry@hotmail.com    |
+|27       |Horikoshi|horikoshi@yahoo.co.jp|
++---------+---------+---------------------+
+
+--3.17 (17 rows)
++---------+---------+---------+
+|id_auteur|nom      |nb albums|
++---------+---------+---------+
+|4        |Franquin |9        |
+|1        |Uderzo   |8        |
+|5        |Jacobs   |7        |
+|3        |Hergé    |7        |
+|15       |Morris   |6        |
+|24       |Midam    |4        |
+|29       |Adam     |4        |
+|25       |Janry    |3        |
+|8        |Juillard |2        |
+|14       |Cosey    |2        |
+|17       |Dupuis   |1        |
+|20       |Baldetti |1        |
+|32       |Dan      |1        |
+|10       |Benoît   |1        |
+|27       |Horikoshi|1        |
+|23       |Conrad   |1        |
+|11       |Van Hamme|1        |
++---------+---------+---------+
+
+--3.18 (5 rows)
++---------------------------+
+|nom                        |
++---------------------------+
+|Dupuis                     |
+|Idéfix et les irréductibles|
+|Modeste                    |
+|My Hero Academia           |
+|Tintin                     |
++---------------------------+
+
+--3.19 (1 row)
++-------------+------------+------------+
+|isbn         |titre       |date_edition|
++-------------+------------+------------+
+|2-895-00012-3|Idées Noires|1981-10-05  |
++-------------+------------+------------+
+
+--3.20 (8 rows)
++----------+-----------------+----+-----+
+|id_editeur|nom              |pays|count|
++----------+-----------------+----+-----+
+|4         |Dupuis           |be  |9    |
+|7         |Casterman        |be  |7    |
+|3         |Blake et Mortimer|be  |4    |
+|6         |Le Lombard       |be  |1    |
+|2         |Dargaud          |fr  |9    |
+|1         |Albert René      |fr  |3    |
+|9         |Watterson        |us  |1    |
+|12        |Ki-oon           |null|1    |
++----------+-----------------+----+-----+
