@@ -1,0 +1,449 @@
++-------------------------------------+
+|BD1 Solution des requêtes de niveau 4|
++-------------------------------------+
+
+--4.1 (29 row)
++-------------+----------------------------------------+------------+----+-----------------+
+|isbn         |titre                                   |date_edition|prix|nom              |
++-------------+----------------------------------------+------------+----+-----------------+
+|2-87097-178-8|La Machination Voronov                  |2013-10-07  |16  |Blake et Mortimer|
+|2-8036-1079-5|Histoire sans héros                     |null        |16  |Le Lombard       |
+|2-7234-9164-1|La quête d'Ewilan : d'un monde à l'autre|2013-10-16  |15  |Glénat           |
+|2-87097-043-9|L'Affaire Françis Blake                 |1996-09-19  |14  |Blake et Mortimer|
+|2-8001-2900-x|Zeke raconte des histoires              |1999-12-31  |14  |Dupuis           |
+|2-87097-052-8|La Machination Voronov                  |2000-01-01  |14  |Blake et Mortimer|
+|2-8021-3900-x|Spirou et Fantasio à Tokyo              |2001-09-20  |14  |Dargaud          |
+|2-8031-3900-6|Une dernière aventure d'Astérix         |2006-10-27  |14  |Dargaud          |
+|1-0347-6312-2|Silence of the lamps                    |2022-11-15  |12.9|Dupuis           |
+|2-8001-4707-9|Tiens-toi droit !                       |2010-11-04  |12.5|Dupuis           |
+|2-8001-5695-8|T'es gonflé !                           |2012-11-02  |12.5|Dupuis           |
+|2-8649-7199-3|La galère d'Obélix                      |1996-10-10  |12.4|Albert René      |
+|2-8649-7199-4|La galère d'Obélix                      |1996-10-10  |12.4|Albert René      |
+|1-0347-5432-8|Deep impact                             |2021-01-15  |12.4|Dupuis           |
+|2-152-12345-X|Les aventures complètes d'Oumpah-Pah    |1980-12-31  |12  |Le Lombard       |
+|2-8035-0029-9|Modeste et Pompon                       |1981-10-05  |12  |Magic Strip      |
+|2-87097-017-X|Les 3 Formules du Professeur Sato       |1990-01-01  |12  |Blake et Mortimer|
+|2-8001-2850-X|Captives à bord                         |1999-10-01  |12  |Dupuis           |
+|1-0347-4357-5|Bad cave                                |2019-10-31  |11.9|Dupuis           |
+|1-0347-3125-1|La vérité sur tout                      |2019-11-15  |11.9|Dupuis           |
+|1-0347-4914-0|On ne parle pas la bouche pleine !      |2022-10-14  |11.9|Dupuis           |
+|2-9306-1814-2|Only for your eyes                      |2011-11-21  |11.6|Dupuis           |
+|2-9306-1825-8|Cold case affaires glacées              |2012-08-04  |11.6|Dupuis           |
+|2-9306-1805-0|Sound of silence                        |2011-03-21  |10.9|Dupuis           |
+|2-8649-7266-2|Astérix chez les Pictes                 |2013-10-24  |10.5|Albert René      |
+|2-895-00012-3|Idées Noires                            |1981-10-05  |10  |Fluide Glacial   |
+|2-87097-008-0|Le mystère de la grande pyramide        |1986-12-31  |10  |Blake et Mortimer|
+|2-87097-009-9|Le mystère de la grande pyramide        |1987-04-04  |10  |Blake et Mortimer|
+|2-258-03438-8|En avant, tête de thon !                |1991-10-01  |10  |Watterson        |
++-------------+----------------------------------------+------------+----+-----------------+
+
+--4.2 (7 rows)
++---------+--------+
+|id_auteur|nom     |
++---------+--------+
+|19       |Lylian  |
+|2        |Goscinny|
+|34       |Gof     |
+|22       |Ferri   |
+|31       |Patelin |
+|7        |Sente   |
+|13       |Jidehem |
++---------+--------+
+
+--4.3 (1 rows)
++----------+---------+-------+----+
+|id_editeur|nom      |adresse|pays|
++----------+---------+-------+----+
+|9         |Watterson|null   |us  |
++----------+---------+-------+----+
+
+--4.4 (13 rows)
++---------+---------+
+|id_auteur|nom      |
++---------+---------+
+|32       |Dan      |
+|14       |Cosey    |
+|12       |Fanny    |
+|29       |Adam     |
+|25       |Janry    |
+|34       |Gof      |
+|24       |Midam    |
+|31       |Patelin  |
+|35       |De Becker|
+|18       |Pellerin |
+|30       |Ben BK   |
+|33       |Angèle   |
+|13       |Jidehem  |
++---------+---------+
+
+--4.5 (5 rows)
++---------------+---------+
+|nom            |nb_albums|
++---------------+---------+
+|Game Over      |3        |
+|Gaston         |3        |
+|Le petit Spirou|6        |
+|Lucky Luke     |1        |
+|Spirou         |4        |
++---------------+---------+
+
+--4.6 (1 row)
++----------+-------+-------+----+
+|id_editeur|nom    |adresse|pays|
++----------+-------+-------+----+
+|2         |Dargaud|null   |fr  |
++----------+-------+-------+----+
+
+--4.7 (36 rows)
++-------------+------------------------------------+-----+-------+------------+----+
+|isbn         |titre                               |serie|editeur|date_edition|prix|
++-------------+------------------------------------+-----+-------+------------+----+
+|2-88257-000-4|Nitroglycérine                      |1    |2      |1987-07-03  |5   |
+|2-205-00585-5|Ma Dalton                           |1    |2      |1980-06-05  |5   |
+|2-205-00920-6|La guérison des Dalton              |1    |2      |1978-06-28  |5   |
+|2-8001-0955-6|LA SAGA DES GAFFES                  |3    |4      |1982-12-01  |6   |
+|2-8001-0091-5|LE CAS LAGAFFE                      |3    |4      |1977-01-01  |6   |
+|2-8001-0019-2|Spirou et les hommes-bulles         |4    |4      |1986-01-01  |7   |
+|2-8001-0018-4|L'ombre du Z                        |4    |4      |1976-04-01  |7   |
+|2-8001-0017-6|Z comme Zorglub                     |4    |4      |1977-08-24  |7   |
+|2-8001-0015-X|Le voyageur du mésozoïque           |4    |4      |1977-12-14  |7   |
+|2-895-00012-3|Idées Noires                        |null |8      |1981-10-05  |10  |
+|2-8035-0029-9|Modeste et Pompon                   |5    |5      |1981-10-05  |12  |
+|2-86497-004-X|L'odyssée d'Astérix                 |6    |1      |1981-07-02  |6   |
+|2-205-00096-9|Astérix le gaulois                  |6    |2      |1975-06-16  |6   |
+|2-205-00600-2|Les lauriers de César               |6    |2      |1978-11-01  |6   |
+|2-205-00230-9|Astérix légionnaire                 |6    |2      |1976-11-30  |6   |
+|2-152-12345-X|Les aventures complètes d'Oumpah-Pah|8    |6      |1980-12-31  |12  |
+|2-87097-009-9|Le mystère de la grande pyramide    |7    |3      |1987-04-04  |10  |
+|2-87097-008-0|Le mystère de la grande pyramide    |7    |3      |1986-12-31  |10  |
+|2-87097-010-2|La marque jaune                     |7    |3      |1987-12-15  |9   |
+|2-87097-043-9|L'Affaire Françis Blake             |7    |3      |1996-09-19  |14  |
+|2-8021-3900-x|Spirou et Fantasio à Tokyo          |9    |2      |2001-09-20  |14  |
+|2-8031-3900-6|Une dernière aventure d'Astérix     |6    |2      |2006-10-27  |14  |
+|2-87097-002-1|Le Secret de l'Espadon tome 1       |7    |3      |1984-01-15  |9   |
+|2-87097-004-8|Le Secret de L'Espadon tome 2       |7    |3      |1985-02-22  |9   |
+|2-87097-005-6|Le Secret de L'Espadon tome 3       |7    |3      |1986-03-29  |9   |
+|2-205-00921-4|Obélix et compagnie                 |6    |6      |1976-09-01  |6   |
+|2-86497-020-1|Astérix chez Rahazade               |6    |1      |1987-11-14  |6   |
+|2-205-01144-8|Le Fil qui chante                   |1    |2      |1977-12-31  |5   |
+|2-205-00517-0|Canyon Apache                       |1    |4      |1975-09-18  |8   |
+|2-258-03431-0|Adieu Monde Cruel!                  |10   |9      |1991-01-01  |9   |
+|2-8036-1079-5|Histoire sans héros                 |null |6      |null        |16  |
+|2-8649-7199-3|La galère d'Obélix                  |6    |1      |1996-10-10  |12.4|
+|2-8649-7199-4|La galère d'Obélix                  |6    |1      |1996-10-10  |12.4|
+|1-0327-1144-6|De la seconde A au OFA              |14   |12     |2022-07-07  |6.6 |
+|2-258-03438-8|En avant, tête de thon !            |10   |9      |1991-10-01  |10  |
+|2-8001-4707-9|Tiens-toi droit !                   |12   |4      |2010-11-04  |12.5|
++-------------+------------------------------------+-----+-------+------------+----+
+
+--4.8 (8 rows)
++-----------------+----------+
+|nom              |nb_auteurs|
++-----------------+----------+
+|Le petit Spirou  |8         |
+|Blake et Mortimer|7         |
+|Game Over        |7         |
+|Astérix          |5         |
+|Lucky Luke       |3         |
+|Gaston           |2         |
+|OUMPAH-PAH       |2         |
+|Spirou           |2         |
++-----------------+----------+
+
+--4.9 (19 rows)
++---------+---------+---------+
+|id_auteur|nom      |nb_albums|
++---------+---------+---------+
+|16       |Guy Vidal|2        |
+|3        |Hergé    |7        |
+|25       |Janry    |4        |
+|10       |Benoît   |1        |
+|5        |Jacobs   |7        |
+|13       |Jidehem  |1        |
+|14       |Cosey    |2        |
+|19       |Lylian   |1        |
+|27       |Horikoshi|1        |
+|1        |Uderzo   |4        |
+|11       |Van Hamme|1        |
+|7        |Sente    |2        |
+|2        |Goscinny |10       |
+|31       |Patelin  |3        |
+|18       |Pellerin |1        |
+|24       |Midam    |4        |
+|22       |Ferri    |1        |
+|4        |Franquin |3        |
+|34       |Gof      |2        |
++---------+---------+---------+
+
+--4.10 (34 rows)
++---------+---------+---------+
+|id_auteur|nom      |nb_albums|
++---------+---------+---------+
+|1        |Uderzo   |11       |
+|2        |Goscinny |10       |
+|4        |Franquin |9        |
+|5        |Jacobs   |7        |
+|3        |Hergé    |7        |
+|15       |Morris   |6        |
+|24       |Midam    |6        |
+|25       |Janry    |4        |
+|29       |Adam     |4        |
+|30       |Ben BK   |4        |
+|33       |Angèle   |3        |
+|31       |Patelin  |3        |
+|9        |DeMille  |2        |
+|11       |Van Hamme|2        |
+|32       |Dan      |2        |
+|34       |Gof      |2        |
+|14       |Cosey    |2        |
+|16       |Guy Vidal|2        |
+|7        |Sente    |2        |
+|8        |Juillard |2        |
+|10       |Benoît   |2        |
+|35       |De Becker|1        |
+|6        |de Moor  |1        |
+|12       |Fanny    |1        |
+|13       |Jidehem  |1        |
+|17       |Dupuis   |1        |
+|18       |Pellerin |1        |
+|19       |Lylian   |1        |
+|20       |Baldetti |1        |
+|21       |Chevalier|1        |
+|22       |Ferri    |1        |
+|23       |Conrad   |1        |
+|26       |Bastide  |1        |
+|27       |Horikoshi|1        |
++---------+---------+---------+
+
+--4.11 (8 rows)
++---------+---------+---------------------+
+|id_auteur|nom      |e_mail               |
++---------+---------+---------------------+
+|4        |Franquin |null                 |
+|14       |Cosey    |cosey@hotmail.com    |
+|22       |Ferri    |ferri@yahoo.fr       |
+|24       |Midam    |midam@skynet.be      |
+|25       |Janry    |janry@hotmail.com    |
+|27       |Horikoshi|horikoshi@yahoo.co.jp|
+|31       |Patelin  |patelin@gmail.com    |
+|34       |Gof      |gof@gmail.com        |
++---------+---------+---------------------+
+
+--4.12 (2 rows)
++-------------+-------------------+
+|isbn         |titre              |
++-------------+-------------------+
+|2-205-00230-9|Astérix légionnaire|
+|2-205-00921-4|Obélix et compagnie|
++-------------+-------------------+
+
+--4.13 (35 rows)
++-------------+----------------------------------+-----+-------+------------+----+
+|isbn         |titre                             |serie|editeur|date_edition|prix|
++-------------+----------------------------------+-----+-------+------------+----+
+|1-0327-1144-6|De la seconde A au OFA            |14   |12     |2022-07-07  |6.6 |
+|1-0347-3125-1|La vérité sur tout                |12   |4      |2019-11-15  |11.9|
+|1-0347-4357-5|Bad cave                          |11   |4      |2019-10-31  |11.9|
+|1-0347-4914-0|On ne parle pas la bouche pleine !|12   |4      |2022-10-14  |11.9|
+|2-203-00103-8|Les Cigares du Pharaon            |2    |7      |1955-02-24  |8   |
+|2-203-00105-4|L'Oreille Cassée                  |2    |7      |1979-05-04  |8   |
+|2-203-00107-0|Le Sceptre d'Ottokar              |2    |7      |1947-01-14  |8   |
+|2-203-00109-0|Coke en Stock                     |2    |7      |1958-07-12  |8   |
+|2-203-00117-8|L'Affaire Tournesol               |2    |7      |1956-03-12  |8   |
+|2-203-00123-2|Tintin et les Picaros             |2    |7      |1976-04-20  |8   |
+|2-203-12345-6|Vol 714 pour Sydney               |2    |7      |1968-02-04  |8   |
+|2-8001-0015-X|Le voyageur du mésozoïque         |4    |4      |1977-12-14  |7   |
+|2-8001-0017-6|Z comme Zorglub                   |4    |4      |1977-08-24  |7   |
+|2-8001-0019-2|Spirou et les hommes-bulles       |4    |4      |1986-01-01  |7   |
+|2-8001-0091-5|LE CAS LAGAFFE                    |3    |4      |1977-01-01  |6   |
+|2-8001-0955-6|LA SAGA DES GAFFES                |3    |4      |1982-12-01  |6   |
+|2-8001-2850-X|Captives à bord                   |null |4      |1999-10-01  |12  |
+|2-8001-2900-x|Zeke raconte des histoires        |null |4      |1999-12-31  |14  |
+|2-8021-3900-x|Spirou et Fantasio à Tokyo        |9    |2      |2001-09-20  |14  |
+|2-8031-3900-6|Une dernière aventure d'Astérix   |6    |2      |2006-10-27  |14  |
+|2-8035-0029-9|Modeste et Pompon                 |5    |5      |1981-10-05  |12  |
+|2-8036-1079-5|Histoire sans héros               |null |6      |null        |16  |
+|2-8649-7199-3|La galère d'Obélix                |6    |1      |1996-10-10  |12.4|
+|2-8649-7199-4|La galère d'Obélix                |6    |1      |1996-10-10  |12.4|
+|2-8649-7596-3|Pas de quartier pour le latin !   |13   |1      |2021-06-16  |8.99|
+|2-86497-004-X|L'odyssée d'Astérix               |6    |1      |1981-07-02  |6   |
+|2-86497-020-1|Astérix chez Rahazade             |6    |1      |1987-11-14  |6   |
+|2-87097-002-1|Le Secret de l'Espadon tome 1     |7    |3      |1984-01-15  |9   |
+|2-87097-004-8|Le Secret de L'Espadon tome 2     |7    |3      |1985-02-22  |9   |
+|2-87097-005-6|Le Secret de L'Espadon tome 3     |7    |3      |1986-03-29  |9   |
+|2-87097-008-0|Le mystère de la grande pyramide  |7    |3      |1986-12-31  |10  |
+|2-87097-009-9|Le mystère de la grande pyramide  |7    |3      |1987-04-04  |10  |
+|2-87097-010-2|La marque jaune                   |7    |3      |1987-12-15  |9   |
+|2-87097-055-9|Joyeux Noël, May                  |null |4      |1998-11-07  |7   |
+|2-895-00012-3|Idées Noires                      |null |8      |1981-10-05  |10  |
++-------------+----------------------------------+-----+-------+------------+----+
+
+--4.14 (32 rows)
++-------------+---------+------------------+
+|annee_edition|nb_albums|prix_moyen        |
++-------------+---------+------------------+
+|1982         |1        |6                 |
+|1978         |2        |5.5               |
+|1955         |1        |8                 |
+|1976         |4        |6.75              |
+|2021         |2        |10.695            |
+|1975         |2        |7                 |
+|1996         |4        |11.2              |
+|1984         |1        |9                 |
+|2011         |2        |11.25             |
+|1980         |2        |8.5               |
+|2022         |3        |10.466666666666667|
+|2012         |2        |12.05             |
+|1985         |2        |7                 |
+|2006         |1        |14                |
+|2010         |1        |12.5              |
+|1987         |4        |7.5               |
+|2001         |1        |14                |
+|2019         |2        |11.9              |
+|1968         |1        |8                 |
+|1981         |3        |9.333333333333334 |
+|1986         |3        |8.666666666666666 |
+|2013         |3        |13.833333333333334|
+|1977         |4        |6.25              |
+|1956         |1        |8                 |
+|1998         |1        |7                 |
+|1999         |2        |13                |
+|1990         |1        |12                |
+|2000         |1        |14                |
+|1958         |1        |8                 |
+|1991         |2        |9.5               |
+|1979         |2        |6                 |
+|1947         |1        |8                 |
++-------------+---------+------------------+
+
+--4.15 (4 rows)
++---------+--------+---------------+
+|id_auteur|nom     |e_mail         |
++---------+--------+---------------+
+|1        |Uderzo  |null           |
+|4        |Franquin|null           |
+|24       |Midam   |midam@skynet.be|
+|29       |Adam    |null           |
++---------+--------+---------------+
+
+--4.16
++------------+
+|date_edition|
++------------+
+|1975-06-16  |
++------------+
+
+--4.17 (1 row)
++-------------+------------------+-----+-------+------------+----+
+|isbn         |titre             |serie|editeur|date_edition|prix|
++-------------+------------------+-----+-------+------------+----+
+|2-205-00096-9|Astérix le gaulois|6    |2      |1975-06-16  |6   |
++-------------+------------------+-----+-------+------------+----+
+
+--4.18 (60 rows)
++-------------+------------------------------------+----------+
+|isbn         |titre                               |nb_auteurs|
++-------------+------------------------------------+----------+
+|2-9306-1805-0|Sound of silence                    |6         |
+|1-0347-5432-8|Deep impact                         |4         |
+|1-0347-6312-2|Silence of the lamps                |4         |
+|2-9306-1825-8|Cold case affaires glacées          |4         |
+|2-8001-5695-8|T'es gonflé !                       |3         |
+|2-8649-7266-2|Astérix chez les Pictes             |3         |
+|2-87097-052-8|La Machination Voronov              |3         |
+|2-87097-178-8|La Machination Voronov              |3         |
+|2-9306-1814-2|Only for your eyes                  |3         |
+|2-152-12345-X|Les aventures complètes d'Oumpah-Pah|2         |
+|2-205-00096-9|Astérix le gaulois                  |2         |
+|2-205-00230-9|Astérix légionnaire                 |2         |
+|2-205-00517-0|Canyon Apache                       |2         |
+|2-205-00585-5|Ma Dalton                           |2         |
+|2-205-00600-2|Les lauriers de César               |2         |
+|2-205-00920-6|La guérison des Dalton              |2         |
+|2-205-00921-4|Obélix et compagnie                 |2         |
+|2-205-01144-8|Le Fil qui chante                   |2         |
+|2-205-01150-2|Astérix chez les Belges             |2         |
+|2-205-03043-4|La fiancée de Lucky Luke            |2         |
+|2-8001-0018-4|L'ombre du Z                        |2         |
+|2-8001-4707-9|Tiens-toi droit !                   |2         |
+|2-87097-017-X|Les 3 Formules du Professeur Sato   |2         |
+|2-87097-043-9|L'Affaire Françis Blake             |2         |
+|2-88257-000-4|Nitroglycérine                      |2         |
+|2-908-46271-0|FAITES GAFFE A LAGAFFE              |2         |
+|1-0347-3125-1|La vérité sur tout                  |1         |
+|1-0347-4357-5|Bad cave                            |1         |
+|1-0347-4914-0|On ne parle pas la bouche pleine !  |1         |
+|2-203-00103-8|Les Cigares du Pharaon              |1         |
+|2-203-00105-4|L'Oreille Cassée                    |1         |
+|2-203-00107-0|Le Sceptre d'Ottokar                |1         |
+|2-203-00109-0|Coke en Stock                       |1         |
+|2-203-00117-8|L'Affaire Tournesol                 |1         |
+|2-203-00123-2|Tintin et les Picaros               |1         |
+|2-203-12345-6|Vol 714 pour Sydney                 |1         |
+|2-8001-0015-X|Le voyageur du mésozoïque           |1         |
+|2-8001-0017-6|Z comme Zorglub                     |1         |
+|2-8001-0019-2|Spirou et les hommes-bulles         |1         |
+|2-8001-0091-5|LE CAS LAGAFFE                      |1         |
+|2-8001-0955-6|LA SAGA DES GAFFES                  |1         |
+|2-8001-2850-X|Captives à bord                     |1         |
+|2-8001-2900-x|Zeke raconte des histoires          |1         |
+|2-8021-3900-x|Spirou et Fantasio à Tokyo          |1         |
+|2-8031-3900-6|Une dernière aventure d'Astérix     |1         |
+|2-8035-0029-9|Modeste et Pompon                   |1         |
+|2-8036-1079-5|Histoire sans héros                 |1         |
+|2-8649-7199-3|La galère d'Obélix                  |1         |
+|2-8649-7199-4|La galère d'Obélix                  |1         |
+|2-8649-7596-3|Pas de quartier pour le latin !     |1         |
+|2-86497-004-X|L'odyssée d'Astérix                 |1         |
+|2-86497-020-1|Astérix chez Rahazade               |1         |
+|2-87097-002-1|Le Secret de l'Espadon tome 1       |1         |
+|2-87097-004-8|Le Secret de L'Espadon tome 2       |1         |
+|2-87097-005-6|Le Secret de L'Espadon tome 3       |1         |
+|2-87097-008-0|Le mystère de la grande pyramide    |1         |
+|2-87097-009-9|Le mystère de la grande pyramide    |1         |
+|2-87097-010-2|La marque jaune                     |1         |
+|2-87097-055-9|Joyeux Noël, May                    |1         |
+|2-895-00012-3|Idées Noires                        |1         |
++-------------+------------------------------------+----------+
+
+--4.19 (3 rows)
++-------------+-------------+------------+------------+--------------------------------+
+|isbn         |isbn         |date_edition|date_edition|titre                           |
++-------------+-------------+------------+------------+--------------------------------+
+|2-87097-009-9|2-87097-008-0|1987-04-04  |1986-12-31  |Le mystère de la grande pyramide|
+|2-87097-178-8|2-87097-052-8|2013-10-07  |2000-01-01  |La Machination Voronov          |
+|2-8649-7199-4|2-8649-7199-3|1996-10-10  |1996-10-10  |La galère d'Obélix              |
++-------------+-------------+------------+------------+--------------------------------+
+
+--4.20 (2 rows)
++---------+--------+-----------------+---------+-----------+
+|id_auteur|nom     |e_mail           |nb_albums|nb_editeurs|
++---------+--------+-----------------+---------+-----------+
+|8        |Juillard|juillard@yahoo.fr|2        |1          |
+|10       |Benoît  |benoit@yahoo.fr  |2        |2          |
++---------+--------+-----------------+---------+-----------+
+
+--4.21 (13 rows)
++---------+---------+---------+
+|id_auteur|nom      |nb_albums|
++---------+---------+---------+
+|1        |Uderzo   |4        |
+|3        |Hergé    |7        |
+|4        |Franquin |7        |
+|5        |Jacobs   |6        |
+|10       |Benoît   |1        |
+|11       |Van Hamme|1        |
+|14       |Cosey    |2        |
+|17       |Dupuis   |1        |
+|18       |Pellerin |1        |
+|24       |Midam    |1        |
+|25       |Janry    |2        |
+|26       |Bastide  |1        |
+|27       |Horikoshi|1        |
++---------+---------+---------+
+
+
+
+
+
+
