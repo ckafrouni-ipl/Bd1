@@ -236,13 +236,11 @@ ORDER BY nb_albums DESC;
 SELECT s.nom
 FROM bd3.albums a,
 	 bd3.participations p,
-	 bd3.auteurs au,
 	 bd3.series s
 WHERE a.isbn = p.isbn
-  AND p.auteur = au.id_auteur
   AND a.serie = s.id_serie
 GROUP BY s.nom
-HAVING COUNT(DISTINCT au.*) = 1;
+HAVING COUNT(DISTINCT p.auteur) = 1;
 
 -- 19.
 -- Donnez l’isbn, le titre et la date d’édition de tous les albums, édités en 1980 ou en 1981,
