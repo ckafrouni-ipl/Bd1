@@ -112,12 +112,9 @@ GROUP BY au.id_auteur;
 -- Donnez, pour chaque auteur, son identifiant, son nom et le nombre d’albums auxquels il a
 -- participé ; affichez les résultats dans l’ordre décroissant du nombre d’albums. Les auteurs n’ayant
 -- participé à aucun album ne doivent pas apparaître.
-SELECT au.id_auteur, au.nom, COUNT(*) nb_albums
-FROM bd3.albums a,
-	 bd3.participations p,
-	 bd3.auteurs au
-WHERE a.isbn = p.isbn
-  AND p.auteur = au.id_auteur
+SELECT au.id_auteur, au.nom, COUNT(DISTINCT p.isbn) nb_albums
+FROM bd3.auteurs au
+	 JOIN bd3.participations p ON au.id_auteur = p.auteur
 GROUP BY au.id_auteur
 ORDER BY nb_albums DESC;
 
